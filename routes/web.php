@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('companies', 'App\Http\Controllers\CompaniesController');
+Route::resource('companies', 'App\Http\Controllers\CompaniesController')->middleware('auth');
 
 Auth::routes();
 
